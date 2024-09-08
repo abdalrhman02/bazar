@@ -1,0 +1,145 @@
+.store .container {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  margin: 3em 150px 8em;
+}
+.store .container .sections-products .search-add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.store .container .sections-products .search-add .search {
+  display: flex;
+  align-items: center;
+  height: 2.6em;
+}
+.store .container .sections-products .search-add .search button {
+  background-color: var(--dark-green);
+  border: none;
+  width: 5em;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.store .container .sections-products .search-add .search button img {
+  width: 2em;
+}
+.store .container .sections-products .search-add .search input {
+  height: 100%;
+  width: 24em;
+  padding-right: 10px;
+  background-color: rgba(63, 88, 67, 0.631372549);
+  color: #FFF;
+  outline: none;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.store .container .sections-products .search-add .search input::-moz-placeholder {
+  color: #fff;
+}
+.store .container .sections-products .search-add .search input::placeholder {
+  color: #fff;
+}
+.store .container .sections-products .search-add .add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: 14px;
+  height: 2.8em;
+  width: 9em;
+  background-color: var(--dark-green);
+}
+.store .container .sections-products .search-add .add img {
+  width: 1.5em;
+}
+.store .container .sections-products .sectionsList {
+  overflow: auto;
+  margin: 1.5em 0;
+  padding-bottom: 1em;
+}
+.store .container .sections-products .sectionsList::-webkit-scrollbar {
+  width: 1px;
+}
+.store .container .sections-products .sectionsList::-webkit-scrollbar-track {
+  background-color: var(--opc-orange);
+  border-radius: 10px;
+}
+.store .container .sections-products .sectionsList::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border-radius: 10px;
+}
+.store .container .sections-products .sectionsList ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  max-width: 100%;
+}
+.store .container .sections-products .sectionsList ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.store .container .sections-products .sectionsList ul li img {
+  width: 4.5em;
+}
+.store .container .sections-products .sectionsList ul li h3 {
+  color: var(--orange);
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.store .container .sections-products .products .productAdd:nth-of-type(2n+2) {
+  background-color: #EEEEEE;
+}
+.store .container .options {
+  display: flex;
+  flex-direction: column;
+}
+.store .container .options .types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.store .container .options .types div {
+  position: relative;
+  border: 1px solid var(--opc-orange);
+  border-radius: 8px;
+  width: 7em;
+  height: 7em;
+  text-align: center;
+  transition: 0.4s;
+}
+.store .container .options .types div:hover {
+  background-color: #EEEEEE;
+  border: 1px solid var(--dark-green);
+  cursor: pointer;
+}
+.store .container .options .types div:hover img {
+  transform: scale(1.1) translate(-45%, -45%);
+}
+.store .container .options .types div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 4em;
+  transition: 0.4s;
+}
+.store .container .options .towns {
+  margin-top: 3em;
+}
+.store .container .options .towns h3 {
+  margin-bottom: 10px;
+}
+.store .container .options .towns select {
+  width: 16em;
+  height: 2.3em;
+  font-size: 15px;
+  background-color: var(--opc-green);
+  color: #fff;
+  border: 2px solid var(--dark-green);
+}/*# sourceMappingURL=store.css.map */

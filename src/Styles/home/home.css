@@ -1,0 +1,156 @@
+.home .intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 130px;
+}
+.home .intro .image img {
+  width: 35em;
+}
+.home .intro .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  max-width: 650px;
+}
+.home .intro .text h1 {
+  font-size: 3.4em;
+  text-align: right;
+  line-height: 1.4em;
+}
+.home .intro .text h1 .bo {
+  color: var(--orange);
+}
+.home .intro .text h1 .bg {
+  color: var(--dark-green);
+}
+.home .intro .text p {
+  font-size: 18px;
+  text-align: right;
+  line-height: 1.6em;
+}
+.home .some-sections {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  margin: 4em 0;
+}
+.home .some-sections .sec {
+  text-align: center;
+}
+.home .some-sections .sec .image {
+  padding: 12px;
+  border-radius: 50%;
+  border: 3px solid var(--orange);
+  transition: 0.4s;
+}
+.home .some-sections .sec .image:hover {
+  transform: scale(1.05);
+}
+.home .some-sections .sec .image img {
+  width: 5.5em;
+}
+.home .some-sections .sec h3 {
+  margin-top: 8px;
+  color: var(--orange);
+  font-weight: 600;
+}
+.home .last-ads {
+  padding: 0 150px;
+  margin: 10em 0;
+}
+.home .last-ads .container {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4em;
+}
+.home .last-ads .container .ad {
+  background-color: #EBE6E6;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+.home .last-ads .container .ad img {
+  width: 15em;
+  height: 13em;
+  border-radius: 4px;
+  margin-bottom: 7px;
+}
+.home .last-ads .container .ad .name {
+  font-size: 17px;
+}
+.home .last-ads .container .ad .price {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+.home .last-ads .container .ad .date {
+  font-size: 13px;
+  color: #636363;
+  font-weight: 400;
+}
+.home .about {
+  padding: 0 150px;
+}
+.home .about .container {
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+.home .about .container .image img {
+  width: 22em;
+  box-shadow: 8px 8px 0px 0px var(--orange);
+  border-radius: 4px;
+}
+.home .about .container .text p {
+  margin: 20px 0 15px 0;
+  max-width: 650px;
+  line-height: 1.6em;
+  font-size: 17px;
+}
+.home .about .container .text p b {
+  color: var(--orange);
+}
+.home .seller {
+  padding: 0 180px;
+  margin: 10em 0;
+  display: flex;
+  justify-content: center;
+  gap: 7em;
+}
+.home .seller .text h2 img {
+  width: 5em;
+}
+.home .seller .text p {
+  margin: 10px 0;
+  max-width: 500px;
+  line-height: 1.6em;
+  font-size: 17px;
+}
+.home .seller .features {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2em;
+}
+.home .seller .features .fea {
+  background-color: var(--orange);
+  width: 16em;
+  height: 12em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.home .seller .features .fea img {
+  width: 5em;
+}
+.home .seller .features .fea h3 {
+  color: #fff;
+  font-size: 17px;
+  margin-top: 15px;
+}/*# sourceMappingURL=home.css.map */

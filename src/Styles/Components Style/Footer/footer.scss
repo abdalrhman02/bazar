@@ -1,0 +1,53 @@
+footer {
+    background-color: var(--orange);
+    
+    .container {
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 9px 80px;
+            border-bottom: 3px solid var(--dark-green);
+
+            .logo-img {
+                width: 11em
+            }
+
+            .insta {
+                width: 2em;
+            }
+        }
+
+
+        .links {
+            display: grid;
+            grid-template-columns: 26% 26% 26%;
+            justify-content: center;
+            padding: 40px 80px;
+            
+            ul {
+                
+                li {
+                    color: #FFF;
+                    margin-bottom: 18px
+                }
+            }
+        }
+
+
+        .rights {
+            background-color: var(--dark-green);
+            color: #fff;
+            text-align: center;
+            padding: 7px 0;
+
+            p {
+                margin-bottom: 5px;
+                b {
+                    color: var(--orange)
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.loginSignupForm {
+  position: relative;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  height: 88vh;
+}
+.loginSignupForm .container {
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 1px 0px 6px 0px #c3c3c3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.loginSignupForm .container .image {
+  background-color: rgba(232, 106, 52, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 0;
+  width: 24em;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.loginSignupForm .container .image h1 {
+  color: #FFF;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.loginSignupForm .container .image img {
+  width: 20em;
+}
+.loginSignupForm .container .loginForm {
+  padding: 2em 2em;
+  width: 28em;
+}
+.loginSignupForm .container .loginForm .title {
+  font-size: 28px;
+  margin-bottom: 0.8em;
+}
+.loginSignupForm .container .loginForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+.loginSignupForm .container .loginForm form .inp {
+  position: relative;
+}
+.loginSignupForm .container .loginForm form .inp::before {
+  content: "";
+  background-color: var(--orange);
+  width: 8px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.loginSignupForm .container .loginForm form .inp input {
+  height: 3.2em;
+  width: 95%;
+  border: 1px solid #adadad;
+  border-radius: 4px;
+  font-size: 15px;
+  padding-right: 15px;
+}
+.loginSignupForm .container .loginForm form .btns {
+  display: flex;
+  gap: 1em;
+}
+.loginSignupForm .container .loginForm form .btns button {
+  width: 7.5em;
+  height: 2.5em;
+  font-size: 16px;
+}
+.loginSignupForm .container .loginForm form .btns button:last-child {
+  background-color: var(--dark-green);
+}
+.loginSignupForm .container .loginForm .otherLoginWays {
+  margin-top: 2.5em;
+}
+.loginSignupForm .container .loginForm .otherLoginWays h3 {
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+.loginSignupForm .container .loginForm .otherLoginWays div {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.loginSignupForm .container .loginForm .otherLoginWays div .way {
+  border: 1px solid gray;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 gray;
+  width: 6em;
+  height: 3.5em;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s;
+}
+.loginSignupForm .container .loginForm .otherLoginWays div .way:hover {
+  background-color: rgb(248, 248, 248);
+  cursor: pointer;
+}
+.loginSignupForm .container .loginForm .otherLoginWays div .way:hover img {
+  width: 2.2em;
+}
+.loginSignupForm .container .loginForm .otherLoginWays div .way img {
+  width: 2em;
+  transition: 0.1s;
+}
+
+.signup .container .image {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}/*# sourceMappingURL=login.css.map */

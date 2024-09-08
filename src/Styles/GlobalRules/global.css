@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Alexandria";
+}
+
+:root {
+  --orange: #E86B34;
+  --opc-orange: #E9A284;
+  --dark-green: #3F5843;
+  --opc-green: #869688;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  background-color: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 17px;
+  width: 7em;
+  height: 2.1em;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.title {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.title h2 {
+  position: relative;
+}
+.title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  background-color: var(--orange);
+  width: 60%;
+  height: 4px;
+}
+.title h2 b {
+  color: var(--orange);
+}/*# sourceMappingURL=global.css.map */
