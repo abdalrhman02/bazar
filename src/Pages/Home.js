@@ -22,7 +22,7 @@ function Home() {
                 </div>
 
                 <div className='image'>
-                    <img src={require('../Images/intro-img.png')} />
+                    <img src={require('../Images/home/intro-img.png')} />
                 </div>
             </div>
 
@@ -30,7 +30,7 @@ function Home() {
                 <a href="#">
                     <div className="sec">
                         <div className="image">
-                            <img src={require('../Images/icons/gaming.png')} />
+                            <img src={require('../Images/home/gaming.png')} />
                         </div>
                         <h3>الكترونيات</h3>
                     </div>
@@ -39,7 +39,7 @@ function Home() {
                 <a href="#">
                     <div className="sec">
                         <div className="image">
-                            <img src={require('../Images/icons/sports.png')} />
+                            <img src={require('../Images/home/sports.png')} />
                         </div>
                         <h3>رياضة</h3>
                     </div>
@@ -48,7 +48,7 @@ function Home() {
                 <a href="#">
                     <div className="sec">
                         <div className="image">
-                            <img src={require('../Images/icons/livingroom.png')} />
+                            <img src={require('../Images/home/livingroom.png')} />
                         </div>
                         <h3>اثاث</h3>
                     </div>
@@ -57,7 +57,7 @@ function Home() {
                 <a href="#">
                     <div className="sec">
                         <div className="image">
-                            <img src={require('../Images/icons/microwave.png')} />
+                            <img src={require('../Images/home/microwave.png')} />
                         </div>
                         <h3>مطبخ</h3>
                     </div>
@@ -66,7 +66,7 @@ function Home() {
                 <a href="#">
                     <div className="sec">
                         <div className="image">
-                            <img src={require('../Images/icons/t-shirt.png')} />
+                            <img src={require('../Images/home/t-shirt.png')} />
                         </div>
                         <h3>ملابس</h3>
                     </div>
@@ -75,7 +75,7 @@ function Home() {
                 <a href="#">
                     <div className="sec">
                         <div className="image">
-                            <img src={require('../Images/icons/book.png')} />
+                            <img src={require('../Images/home/book.png')} />
                         </div>
                         <h3>كتب</h3>
                     </div>
@@ -156,7 +156,7 @@ function Home() {
             <div className="about">
                 <div className="container">
                     <div className="image">
-                        <img src={require('../Images/about-img.jpg')} />
+                        <img src={require('../Images/home/about-img.jpg')} />
                     </div>
 
                     <div className="text">

@@ -31,6 +31,16 @@ function Login() {
         }
     };
 
+    
+    // If user logged in go to the home page.
+    auth.onAuthStateChanged(function(user) {
+        if (user) {
+          navigate("/")
+        } else {
+          return
+        }
+    });
+
     return (
         <>
             <Header />

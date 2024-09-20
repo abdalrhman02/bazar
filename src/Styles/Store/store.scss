@@ -3,6 +3,7 @@
     .container {
         display: grid;
         grid-template-columns: 30% 60%;
+        gap: 25px;
         margin: 3em 150px 8em;
 
         .sections-products {            
@@ -17,7 +18,7 @@
                     height: 2.6em;
     
                     button {
-                        background-color: var(--dark-green);
+                        background-color: var(--second-color);
                         border: none;
                         width: 5em;
                         height: 100%;
@@ -54,7 +55,7 @@
                     font-size: 14px;
                     height: 2.8em;
                     width: 9em;
-                    background-color: var(--dark-green);
+                    background-color: var(--second-color);
     
                     img {
                         width: 1.5em;
@@ -67,56 +68,64 @@
             }
     
             .sectionsList {
-                overflow: auto;
+                overflow-x: auto;
                 margin: 1.5em 0;
                 padding-bottom: 1em;
-    
+            
                 &::-webkit-scrollbar {
-                    width:  1px;
+                    height: 13px;
                 }
-                   
+            
                 &::-webkit-scrollbar-track {
-                    background-color: var(--opc-orange);
+                    background-color: var(--opc-main-color);
                     border-radius: 10px;
                 }
-                   
+            
                 &::-webkit-scrollbar-thumb {
-                    background-color: var(--orange);
+                    background-color: var(--main-color);
                     border-radius: 10px;
                 }
-    
+            
                 ul {
                     display: flex;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: flex-start; /* Adjust to start items from left */
                     gap: 4em;
-                    max-width: 100%;
-    
-                    li {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-    
-                        img {
-                            width: 4.5em
-                        }
-    
-                        h3 {
-                            color: var(--orange);
-                            margin-top: 6px;
-                            font-size: 20px;
-                            font-weight: 500;
-                        }
+                    width: max-content; /* Allow the width to extend beyond container */
+                }
+            
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+            
+                    img {
+                        width: 4.5em;
+                    }
+            
+                    h3 {
+                        color: var(--main-color);
+                        margin-top: 6px;
+                        font-size: 20px;
+                        font-weight: 500;
                     }
                 }
             }
+            
     
             .products {
-    
                 .productAdd {
                     &:nth-of-type(2n+2) {
-                        background-color: #EEEEEE
+                        background-color: #F3F3F3
+                    }
+                }
+
+                .no-products {
+                    font-size: 18px;
+
+                    b {
+                        color: var(--main-color);
                     }
                 }
             }
@@ -133,7 +142,8 @@
 
                 div {
                     position: relative;
-                    border: 1px solid var(--opc-orange);
+                    background-color: #F3F3F3;
+                    border: 1px solid var(--opc-main-color);
                     border-radius: 8px;
                     width: 7em;
                     height: 7em;
@@ -141,8 +151,7 @@
                     transition: 0.4s;
 
                     &:hover {
-                        background-color: #EEEEEE;
-                        border: 1px solid var(--dark-green);
+                        border: 1px solid var(--second-color);
 
                         cursor: pointer;
                         img {
@@ -172,9 +181,9 @@
                     width: 16em;
                     height: 2.3em;
                     font-size: 15px;
-                    background-color: var(--opc-green);
+                    background-color: var(--opc-second-color);
                     color: #fff;
-                    border: 2px solid var(--dark-green);
+                    border: 2px solid var(--second-color);
 
                     option {
 

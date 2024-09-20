@@ -16,18 +16,20 @@
 .home .intro .text h1 {
   font-size: 3.4em;
   text-align: right;
-  line-height: 1.4em;
 }
 .home .intro .text h1 .bo {
-  color: var(--orange);
+  color: var(--main-color);
 }
 .home .intro .text h1 .bg {
-  color: var(--dark-green);
+  color: var(--second-color);
 }
 .home .intro .text p {
   font-size: 18px;
   text-align: right;
-  line-height: 1.6em;
+}
+.home .intro .text a {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .home .some-sections {
   display: flex;
@@ -42,7 +44,7 @@
 .home .some-sections .sec .image {
   padding: 12px;
   border-radius: 50%;
-  border: 3px solid var(--orange);
+  border: 3px solid var(--main-color);
   transition: 0.4s;
 }
 .home .some-sections .sec .image:hover {
@@ -53,7 +55,7 @@
 }
 .home .some-sections .sec h3 {
   margin-top: 8px;
-  color: var(--orange);
+  color: var(--main-color);
   font-weight: 600;
 }
 .home .last-ads {
@@ -103,17 +105,16 @@
 }
 .home .about .container .image img {
   width: 22em;
-  box-shadow: 8px 8px 0px 0px var(--orange);
+  box-shadow: 8px 8px 0px 0px var(--main-color);
   border-radius: 4px;
 }
 .home .about .container .text p {
   margin: 20px 0 15px 0;
   max-width: 650px;
-  line-height: 1.6em;
   font-size: 17px;
 }
 .home .about .container .text p b {
-  color: var(--orange);
+  color: var(--main-color);
 }
 .home .seller {
   padding: 0 180px;
@@ -128,7 +129,6 @@
 .home .seller .text p {
   margin: 10px 0;
   max-width: 500px;
-  line-height: 1.6em;
   font-size: 17px;
 }
 .home .seller .features {
@@ -137,7 +137,7 @@
   gap: 2em;
 }
 .home .seller .features .fea {
-  background-color: var(--orange);
+  background-color: var(--main-color);
   width: 16em;
   height: 12em;
   display: flex;

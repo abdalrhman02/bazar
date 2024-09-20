@@ -6,10 +6,10 @@
 }
 
 :root {
-  --orange: #E86B34;
-  --opc-orange: #E9A284;
-  --dark-green: #3F5843;
-  --opc-green: #869688;
+  --main-color: #E86B34;
+  --opc-main-color: #e68e68;
+  --second-color: #3F5843;
+  --opc-second-color: #869688;
 }
 
 a {
@@ -20,8 +20,24 @@ ul {
   list-style: none;
 }
 
+p {
+  line-height: 1.6em;
+}
+
+.disNone {
+  display: none;
+}
+
+.disBlock {
+  display: block;
+}
+
+.disFlex {
+  display: flex;
+}
+
 .btn {
-  background-color: var(--orange);
+  background-color: var(--main-color);
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -40,16 +56,21 @@ ul {
 }
 .title h2 {
   position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .title h2::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
   right: 0;
-  background-color: var(--orange);
+  background-color: var(--main-color);
   width: 60%;
   height: 4px;
 }
 .title h2 b {
-  color: var(--orange);
+  color: var(--main-color);
+}
+.title p b {
+  color: var(--main-color);
 }/*# sourceMappingURL=global.css.map */

@@ -1,14 +1,51 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { auth } from '../firebaseconfig';
+import { onAuthStateChanged } from 'firebase/auth';
+import { logout, AuthStatus } from '../Helpers/AuthContext';
+import { Link } from 'react-router-dom';
 
 function Header() {
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const checkUserStatus = async () => {
+            const loggedInUser = await AuthStatus();
+            setUser(loggedInUser);
+        };
+
+        checkUserStatus();
+    }, []);
+
+    let userLinks = useRef();
+    let userLinksBar = () => {
+        if (userLinks.current.classList.contains("disNone")) {
+            userLinks.current.classList.add("disBlock");
+            userLinks.current.classList.remove("disNone");
+        } else {
+            userLinks.current.classList.remove("disBlock");
+            userLinks.current.classList.add("disNone");
+        }
+    }
+
     return (
         <header>
             <div className="container">
                 <div className="socials-login">
                     <div className="login">
-                        <a href="#">
-                            <p>تسجيل الدخول</p>
-                            <img src={require('../Images/icons/user.png')} />
-                        </a>
+                        {user ? 
+                            <>                            
+                                <img src={require('../Images/icons/white-user.png')} onClick={userLinksBar} />
+                                <div className='userLinks disNone' ref={userLinks}>
+                                    <Link to={("")}><p>الحساب الشخصي</p></Link>
+                                    <Link to={("")}><p>تواصل معنا</p></Link>
+                                    <p onClick={logout}>تسجيل الخروج</p>
+                                </div>
+                            </>
+                            :
+                            <Link to={"/Login"}>
+                                <p>تسجيل الدخول</p>
+                            </Link>
+                        }
                     </div>
 
                     <a href="#" className='socials'>

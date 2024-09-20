@@ -1,0 +1,185 @@
+.productAdd {
+  background-color: #eb9a77;
+  border-bottom: 3px solid var(--second-color);
+}
+.productAdd a {
+  display: flex;
+  justify-content: space-between;
+}
+.productAdd a .product-img {
+  width: 8em;
+  height: 9em;
+}
+.productAdd a .productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em;
+}
+.productAdd a .productInfo .name-price {
+  display: flex;
+  gap: 0.4em;
+  font-size: 20px;
+}
+.productAdd a .productInfo .name-price .name {
+  color: var(--second-color);
+  font-weight: 600;
+}
+.productAdd a .productInfo .name-price .price {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.productAdd a .productInfo .name-price .price p {
+  color: var(--second-color);
+  font-weight: 600;
+}
+.productAdd a .productInfo .name-price .price img {
+  width: 1.2em;
+}
+.productAdd a .productInfo .town, .productAdd a .productInfo .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.productAdd a .productInfo .town p, .productAdd a .productInfo .user p {
+  color: #000;
+}
+.productAdd a .productInfo .town img, .productAdd a .productInfo .user img {
+  width: 1.4em;
+}
+
+.sellerContactWindow {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4588235294);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.sellerContactWindow .sellerContactContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--opc-main-color);
+  border: 3px solid var(--second-color);
+  width: 30%;
+  padding: 2.5em 0 2em;
+}
+.sellerContactWindow .sellerContactContent .closeWindow {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: var(--opc-main-color);
+  border: 3px solid var(--second-color);
+  width: 2em;
+  height: 2em;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sellerContactWindow .sellerContactContent .closeWindow:hover {
+  background-color: var(--main-color);
+}
+.sellerContactWindow .sellerContactContent .closeWindow img {
+  width: 1.8em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.sellerContactWindow .sellerContactContent .text {
+  color: #FFF;
+}
+.sellerContactWindow .sellerContactContent .text h2 {
+  font-size: 36px;
+}
+.sellerContactWindow .sellerContactContent .text p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+.sellerContactWindow .sellerContactContent .logo {
+  width: 6em;
+  margin-top: 20px;
+}
+.sellerContactWindow .sellerContactContent .image {
+  width: 16em;
+}
+
+.product {
+  width: 60%;
+  position: relative;
+  right: 50%;
+  transform: translateX(50%);
+}
+.product .productDetails {
+  background-color: #eeecec;
+  width: 100%;
+  margin: 5em 0 1em;
+  padding: 10px;
+  border-radius: 5px;
+}
+.product .productDetails .productInfo {
+  background-color: #FFF;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+.product .productDetails .productInfo .name {
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: 700;
+}
+.product .productDetails .productInfo div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.product .productDetails .productInfo div img {
+  width: 25px;
+}
+.product .productDetails .productInfo .date {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: gray;
+  font-weight: 400;
+}
+.product .productDetails .productImages .description {
+  margin: 20px 0 30px;
+}
+.product .productDetails .productImages .images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+  padding-bottom: 4em;
+}
+.product .productDetails .productImages .images img {
+  width: 27em;
+  border-radius: 3px;
+  border: 4px solid var(--second-color);
+}
+.product .buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10em;
+}
+.product .buy .btn {
+  width: 9em;
+  height: 2.4em;
+  font-size: 18px;
+}
+.product .buy .more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}/*# sourceMappingURL=ProductAddCardPage.css.map */

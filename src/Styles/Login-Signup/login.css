@@ -52,7 +52,7 @@
 }
 .loginSignupForm .container .loginForm form .inp::before {
   content: "";
-  background-color: var(--orange);
+  background-color: var(--main-color);
   width: 8px;
   height: 100%;
   position: absolute;
@@ -78,7 +78,7 @@
   font-size: 16px;
 }
 .loginSignupForm .container .loginForm form .btns button:last-child {
-  background-color: var(--dark-green);
+  background-color: var(--second-color);
 }
 .loginSignupForm .container .loginForm .otherLoginWays {
   margin-top: 2.5em;

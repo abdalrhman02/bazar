@@ -4,25 +4,59 @@ header .container .socials-login {
   justify-content: space-between;
   height: 40px;
   padding: 0 80px;
-  background-color: var(--orange);
+  background-color: var(--main-color);
 }
-header .container .socials-login img {
-  width: 25px;
+header .container .socials-login .login {
+  position: relative;
 }
-header .container .socials-login .login a {
-  display: flex;
-  align-items: center;
+header .container .socials-login .login img {
+  width: 26px;
+  cursor: pointer;
+}
+header .container .socials-login .login p {
+  color: #FFF;
+  cursor: pointer;
+}
+header .container .socials-login .login .userLinks {
   color: #fff;
+  background-color: var(--main-color);
+  width: 10em;
+  border: 2px solid var(--second-color);
+  border-bottom: none;
+  position: absolute;
+  top: 45px;
 }
-header .container .socials-login .login a img {
-  margin-left: 7px;
+header .container .socials-login .login .userLinks::after {
+  content: "";
+  position: absolute;
+  top: -17px;
+  border-top: 16px solid var(--second-color);
+  border-right: 11px solid transparent;
+  border-left: 11px solid transparent;
+  border-radius: 3px;
+  transform: rotate(180deg);
+}
+header .container .socials-login .login .userLinks p {
+  text-align: center;
+  padding: 14px 0;
+  border-bottom: 2px solid var(--second-color);
+}
+header .container .socials-login .login .userLinks a {
+  color: #fff;
+  text-align: center;
+}
+header .container .socials-login .login .userLinks a p {
+  padding: 14px 0;
+}
+header .container .socials-login .socials img {
+  width: 25px;
 }
 header .container .logo-links {
   padding: 15px 80px;
   display: flex;
   align-items: center;
   gap: 1em;
-  border-bottom: 2px solid var(--orange);
+  border-bottom: 2px solid var(--main-color);
 }
 header .container .logo-links .logo-img {
   width: 8em;

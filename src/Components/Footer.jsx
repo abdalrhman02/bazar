@@ -36,7 +36,7 @@ function Footer(){
 
                 <div className="rights">
                     <p>2024 © Bazar</p>
-                    <p>Develop & Design By <b>CoderKoala</b></p>
+                    <p>Develop & Design By <a href="https://www.coderkoala.xyz/"><b>CoderKoala</b></a></p>
                 </div>
             </div>
         </footer>

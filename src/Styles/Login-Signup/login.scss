@@ -54,7 +54,7 @@
 
                     &::before {
                         content: "";
-                        background-color: var(--orange);
+                        background-color: var(--main-color);
                         width: 8px;
                         height: 100%;
                         position: absolute;
@@ -82,7 +82,7 @@
                         height: 2.5em;
                         font-size: 16px;
                         &:last-child {
-                            background-color: var(--dark-green  );
+                            background-color: var(--second-color  );
                         }
                     }
                 }

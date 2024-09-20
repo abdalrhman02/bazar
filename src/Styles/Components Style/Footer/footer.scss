@@ -1,5 +1,5 @@
 footer {
-    background-color: var(--orange);
+    background-color: var(--main-color);
     
     .container {
 
@@ -8,7 +8,7 @@ footer {
             align-items: center;
             justify-content: space-between;
             padding: 9px 80px;
-            border-bottom: 3px solid var(--dark-green);
+            border-bottom: 3px solid var(--second-color);
 
             .logo-img {
                 width: 11em
@@ -27,25 +27,28 @@ footer {
             padding: 40px 80px;
             
             ul {
-                
                 li {
                     color: #FFF;
-                    margin-bottom: 18px
+                    margin-bottom: 25px
                 }
             }
         }
 
 
         .rights {
-            background-color: var(--dark-green);
+            background-color: var(--second-color);
             color: #fff;
             text-align: center;
             padding: 7px 0;
 
             p {
                 margin-bottom: 5px;
-                b {
-                    color: var(--orange)
+
+                a {
+                    cursor: pointer;
+                    b {
+                        color: var(--main-color)
+                    }
                 }
             }
         }

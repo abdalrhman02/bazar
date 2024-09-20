@@ -11,6 +11,7 @@ import Footer from '../Components/Footer';
 function Signup() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const [town, setTown] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -30,18 +31,13 @@ function Signup() {
 
             await updateProfile(user, { displayName });
             
-            try {
-                await setDoc(doc(app, "users", user.uid), {
-                    username: displayName, 
-                    email: email,
-                    role: "User",
-                });
-            } catch (firestoreError) {
-                console.error("Error creating user document:", firestoreError);
-                setError("Failed to create user document: " + firestoreError.message);
-            }
+            await setDoc(doc(fst, "users", user.uid), {
+                username: displayName, 
+                email: email,
+                town: town,
+                role: "User",
+            });
 
-            // TODO: navigate didn't work!
             console.log("Signup successful");
             navigate('/');
         } catch (error) {
@@ -53,6 +49,16 @@ function Signup() {
             }
         }
     };
+
+
+    // If user logged in go to the home page.
+    auth.onAuthStateChanged(function(user) {
+        if (user) {
+          navigate("/")
+        } else {
+          return
+        }
+    });
 
     return (
         <>
@@ -74,6 +80,9 @@ function Signup() {
                             </div>
                             <div className='inp'>
                                 <input type='text' placeholder='اسم العائلة' value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                            </div>
+                            <div className='inp'>
+                                <input type='text' placeholder='البلد' value={town} onChange={(e) => setTown(e.target.value)} required />
                             </div>
                             <div className='inp'>
                                 <input type='email' placeholder='البريد الالكتروني' value={email} onChange={(e) => setEmail(e.target.value)} required />
