@@ -80,8 +80,9 @@ function Header() {
                     </div>
                 </header>
             ) : (
-                <header>
+                <header className='small-header'>
                     <div className="container">
+
                         <div className="socials-login">
                             <div className="login">
                                 {user ? 
@@ -103,9 +104,12 @@ function Header() {
                                 <img src={require('../Images/icons/instagram.png')} />
                             </a>
                         </div>
+
+                        <div className='logo'>
+                            <a href="/"><img src={require('../Images/Logo/BazarLogo.png')} className='logo-img' /></a>
+                        </div>
         
                         <div className="logo-links">
-                            <a href="/"><img src={require('../Images/Logo/BazarLogo.png')} className='logo-img' /></a>
                             <ul className="links">
                                 <li><Link to={("/")}>الصفحة الرئيسية</Link></li>
                                 <li><Link to={("/Store")}>المنتجات</Link></li>

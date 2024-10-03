@@ -294,13 +294,13 @@
     }
 
 
+    .home .about {
+        padding: 0 40px;
+    }
     .home .about .container {
         flex-direction: column-reverse;
     }
-    .home .about .container .text p {
-        max-width: 600px;
-    }
     .home .about .container .image img {
-        width: 19em;
+        width: 17em;
     }
 }

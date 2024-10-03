@@ -94,6 +94,19 @@ header {
     }
 }
 
+.small-header {
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+        text-align: center;
+        margin-top: 1em;
+        img {
+            width: 8em
+        }
+    }
+}
+
 @media (max-width: 850px) {
     header .container .socials-login {
         padding: 0 40px;
