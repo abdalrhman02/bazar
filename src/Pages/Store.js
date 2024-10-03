@@ -31,6 +31,22 @@ function Store() {
         selectedSection === 'كل شيء' || product.prSection === selectedSection
     );
 
+
+    // Small Screen 
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    useEffect(() => {
+        function handleResize() {
+        setIsSmallScreen(window.innerWidth >= 900);
+        }
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <>
             <Header />
