@@ -1,0 +1,107 @@
+.contact {
+
+    .contactIntro {
+        background: linear-gradient(170deg, var(--main-color) , var(--main-color) , var(--opc-main-color));
+        color: #FFF;
+        height: 22em;
+
+        .title {
+            max-width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            h2 {
+                font-size: 50px;
+                &::after {
+                    background-color: #FFF;
+                    left: 50%;
+                    right: inherit; // To delete right:0; in global.scss
+                    transform: translateX(-50%);
+                }
+            }
+    
+            p {
+                margin-top: 25px;
+                font-size: 18px
+            }
+        }
+    }
+
+    .contactDetails {
+        padding: 0 200px;
+        margin: 5em 0 10em;
+
+        .container {
+            display: flex;
+            gap: 5em;
+            margin-top: 2em;
+
+            .messageForm {
+                width: 45%;
+    
+                form {
+                    background-color: #EAEAEA;
+                    padding: 18px;
+                    border-radius: 3px;
+    
+                    .inp {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 15px;
+    
+                        label {
+    
+                        }
+    
+                        input , textarea {
+                            background-color: var(--opc-main-color);
+                            color: #FFF;
+                            height: 2.8em;
+                            width: 90%;
+                            outline: none;
+                            border: none;
+                            border-radius: 3px;
+                            margin-top: 7px;
+                            padding-right: 7px;
+
+                            &:focus {
+                                border-color: var(--second-color)
+                            }
+                        }
+                        
+    
+                        textarea {
+                            height: 12em;
+                            padding: 7px 7px 0 0 
+                        }
+                    }
+    
+                    [type='submit'] {
+    
+                    }
+                }
+            }
+    
+            .socials {
+    
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 2em;
+    
+                    img {
+                        width: 3.5em;
+                    }
+    
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

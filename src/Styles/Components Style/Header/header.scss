@@ -1,5 +1,4 @@
 header {
-
     .container {
         
         .socials-login {
@@ -30,6 +29,7 @@ header {
                     border-bottom: none;
                     position: absolute;
                     top: 45px;
+                    z-index: 99;
 
                     &::after {
                         content: "";
@@ -91,5 +91,14 @@ header {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 850px) {
+    header .container .socials-login {
+        padding: 0 40px;
+    }
+    header .container .logo-links {
+        padding: 15px 40px;
     }
 }

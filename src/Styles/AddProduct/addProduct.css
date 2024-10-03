@@ -4,10 +4,10 @@
 .addProduct .title h2 {
   font-size: 28px;
 }
-.addProduct .title p {
-  margin-top: 15px;
-  max-width: 600px;
-  font-size: 18px;
+.addProduct .title p a {
+  color: var(--main-color);
+  font-weight: 500;
+  text-decoration: underline;
 }
 .addProduct .forms {
   display: flex;

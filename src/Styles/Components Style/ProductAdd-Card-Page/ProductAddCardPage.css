@@ -182,4 +182,20 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+@media (max-width: 1000px) {
+  .product {
+    width: 75%;
+  }
+  .product .productDetails .productImages .images img {
+    width: 70%;
+  }
+  .product .productDetails .productInfo .name {
+    font-size: 25px;
+  }
+  .product .buy .btn {
+    width: 9em;
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=ProductAddCardPage.css.map */

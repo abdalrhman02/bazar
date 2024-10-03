@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 130px;
+        padding: 0 140px;
         
         .image {
             img {
@@ -73,51 +73,52 @@
         }
     }
 
-    .last-ads {
-        padding: 0 150px;
-        margin: 10em 0;
+    // .last-ads {
+    //     padding: 0 150px;
+    //     margin: 10em 0;
 
-        .container {
-            margin-top: 2em;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 4em;
+    //     .container {
+    //         margin-top: 2em;
+    //         display: flex;
+    //         justify-content: center;
+    //         flex-wrap: wrap;
+    //         gap: 4em;
 
-            .ad {
-                background-color: #EBE6E6;
-                max-width: fit-content;
-                padding: 8px 10px;
-                border-radius: 4px;
+    //         .ad {
+    //             background-color: #EBE6E6;
+    //             max-width: fit-content;
+    //             padding: 8px 10px;
+    //             border-radius: 4px;
 
-                img {
-                    width: 15em;
-                    height: 13em;
-                    border-radius: 4px;
-                    margin-bottom: 7px;
-                }
+    //             img {
+    //                 width: 15em;
+    //                 height: 13em;
+    //                 border-radius: 4px;
+    //                 margin-bottom: 7px;
+    //             }
 
-                .name {
-                    font-size: 17px;
-                }
+    //             .name {
+    //                 font-size: 17px;
+    //             }
 
-                .price {
-                    font-size: 16px;
-                    margin: 10px 0;
-                    font-weight: 600;
-                }
+    //             .price {
+    //                 font-size: 16px;
+    //                 margin: 10px 0;
+    //                 font-weight: 600;
+    //             }
 
-                .date {
-                    font-size: 13px;
-                    color: #636363;
-                    font-weight: 400;
-                }
-            }
-        }
-    }
+    //             .date {
+    //                 font-size: 13px;
+    //                 color: #636363;
+    //                 font-weight: 400;
+    //             }
+    //         }
+    //     }
+    // }
 
     .about {
         padding: 0 150px;
+        margin-top: 12em;
 
         .container {
             display: flex;
@@ -191,10 +192,115 @@
 
                 h3 {
                     color: #fff;
-                    font-size: 17px;
+                    font-size: 16px;
                     margin-top: 15px;
+                    text-align: center;
+                    max-width: 250px;
                 }
             }
         }
+    }
+}
+
+
+@media (max-width: 1500px) {
+    .home .intro {
+        padding: 0 80px;
+    }
+
+    .home .intro .text h1 {
+        font-size: 3em;
+    }
+    .home .intro .text p {
+        max-width: 500px;
+    }
+
+    .home .intro .image img {
+        width: 32em;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .home .seller {
+        padding: 0 100px;
+    }
+    .home .seller .features .fea {
+        width: 15em;
+    }
+    .home .seller .features .fea img {
+        width: 4em;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .home .intro {
+        padding: 0 50px;
+    }
+    .home .intro .text h1 {
+        font-size: 2.5em;
+    }
+    .home .intro .image img {
+        width: 24em;
+    }
+
+    .home .some-sections {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4em;
+        margin: 4em 0;
+        flex-wrap: wrap;
+    }
+
+
+    .home .about {
+        padding: 0 90px;
+    }
+
+
+    .home .seller {
+        padding: 0 80px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4em;
+    }
+    .home .seller .features {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .home .seller .features .fea {
+        height: 13em;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .home .intro {
+        margin-top: 5em;
+        flex-direction: column;
+    }
+    .home .intro .text h1 {
+        text-align: center;
+    }
+    .home .intro .text p {
+        text-align: center;
+    }
+    .home .intro .text {
+        align-items: center;
+    }
+
+
+    .home .about .container {
+        flex-direction: column-reverse;
+    }
+    .home .about .container .text p {
+        max-width: 600px;
+    }
+    .home .about .container .image img {
+        width: 19em;
     }
 }

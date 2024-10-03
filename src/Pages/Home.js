@@ -27,73 +27,55 @@ function Home() {
             </div>
 
             <div className="some-sections">
-                <a href="#">
-                    <div className="sec">
-                        <div className="image">
-                            <img src={require('../Images/home/gaming.png')} />
-                        </div>
-                        <h3>الكترونيات</h3>
+                <div className="sec">
+                    <div className="image">
+                        <img src={require('../Images/home/gaming.png')} />
                     </div>
-                </a>
+                    <h3>الكترونيات</h3>
+                </div>
 
-                <a href="#">
-                    <div className="sec">
-                        <div className="image">
-                            <img src={require('../Images/home/sports.png')} />
-                        </div>
-                        <h3>رياضة</h3>
+                <div className="sec">
+                    <div className="image">
+                        <img src={require('../Images/home/sports.png')} />
                     </div>
-                </a>
+                    <h3>رياضة</h3>
+                </div>
 
-                <a href="#">
-                    <div className="sec">
-                        <div className="image">
-                            <img src={require('../Images/home/livingroom.png')} />
-                        </div>
-                        <h3>اثاث</h3>
+                <div className="sec">
+                    <div className="image">
+                        <img src={require('../Images/home/livingroom.png')} />
                     </div>
-                </a>
+                    <h3>اثاث</h3>
+                </div>
 
-                <a href="#">
-                    <div className="sec">
-                        <div className="image">
-                            <img src={require('../Images/home/microwave.png')} />
-                        </div>
-                        <h3>مطبخ</h3>
+                <div className="sec">
+                    <div className="image">
+                        <img src={require('../Images/home/microwave.png')} />
                     </div>
-                </a>
+                    <h3>مطبخ</h3>
+                </div>
 
-                <a href="#">
-                    <div className="sec">
-                        <div className="image">
-                            <img src={require('../Images/home/t-shirt.png')} />
-                        </div>
-                        <h3>ملابس</h3>
+                <div className="sec">
+                    <div className="image">
+                        <img src={require('../Images/home/t-shirt.png')} />
                     </div>
-                </a>
+                    <h3>ملابس</h3>
+                </div>
 
-                <a href="#">
-                    <div className="sec">
-                        <div className="image">
-                            <img src={require('../Images/home/book.png')} />
-                        </div>
-                        <h3>كتب</h3>
+                <div className="sec">
+                    <div className="image">
+                        <img src={require('../Images/home/book.png')} />
                     </div>
-                </a>
+                    <h3>كتب</h3>
+                </div>
             </div>
 
-            <div className="last-ads">
+            {/* <div className="last-ads">
                 <div className="title">
                     <h2>اخر ما تم عرضه</h2>
                 </div>
 
                 <div className="container">
-                    {/* <ProductCard 
-                        prImgSrc={'../Images/xbox360.jpeg'}
-                        prName={'اكسبوكس 360 + لعبتين'}
-                        prPrice={'320₪'}
-                        prDate={'8/12/2024'}
-                    /> */}
                     
                     <div className="ad">
                         <img src={require('../Images/xbox360.jpeg')} />
@@ -151,7 +133,7 @@ function Home() {
                         <h6 className="date">8/02/2024</h6>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="about">
                 <div className="container">

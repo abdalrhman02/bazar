@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     const [user, setUser] = useState(null);
-
     useEffect(() => {
         const checkUserStatus = async () => {
             const loggedInUser = await AuthStatus();
@@ -27,44 +26,96 @@ function Header() {
         }
     }
 
+
+    // Small Screen 
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    useEffect(() => {
+        function handleResize() {
+        setIsSmallScreen(window.innerWidth >= 900);
+        }
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
-        <header>
-            <div className="container">
-                <div className="socials-login">
-                    <div className="login">
-                        {user ? 
-                            <>                            
-                                <img src={require('../Images/icons/white-user.png')} onClick={userLinksBar} />
-                                <div className='userLinks disNone' ref={userLinks}>
-                                    <Link to={("")}><p>الحساب الشخصي</p></Link>
-                                    <Link to={("")}><p>تواصل معنا</p></Link>
-                                    <p onClick={logout}>تسجيل الخروج</p>
-                                </div>
-                            </>
-                            :
-                            <Link to={"/Login"}>
-                                <p>تسجيل الدخول</p>
-                            </Link>
-                        }
+        <>
+            {isSmallScreen ? (
+                <header>
+                    <div className="container">
+                        <div className="socials-login">
+                            <div className="login">
+                                {user ? 
+                                    <>                            
+                                        <img src={require('../Images/icons/white-user.png')} onClick={userLinksBar} />
+                                        <div className='userLinks disNone' ref={userLinks}>
+                                            <Link to={("")}><p>الحساب الشخصي</p></Link>
+                                            <p onClick={logout}>تسجيل الخروج</p>
+                                        </div>
+                                    </>
+                                    :
+                                    <Link to={"/Login"}>
+                                        <p>تسجيل الدخول</p>
+                                    </Link>
+                                }
+                            </div>
+
+                            <a href="#" className='socials'>
+                                <img src={require('../Images/icons/instagram.png')} />
+                            </a>
+                        </div>
+
+                        <div className="logo-links">
+                            <a href="/"><img src={require('../Images/Logo/BazarLogo.png')} className='logo-img' /></a>
+                            <ul className="links">
+                                <li><Link to={("/")}>الصفحة الرئيسية</Link></li>
+                                <li><Link to={("/Store")}>المنتجات</Link></li>
+                                <li><Link to={("/Contact")}>تواصل معنا</Link></li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <a href="#" className='socials'>
-                        <img src={require('../Images/icons/instagram.png')} />
-                    </a>
-                </div>
-
-                <div className="logo-links">
-                    <a href="/"><img src={require('../Images/Logo/BazarLogo.png')} className='logo-img' /></a>
-                    <ul className="links">
-                        <li><a href="#">الكترونيات</a></li>
-                        <li><a href="#">كتب</a></li>
-                        <li><a href="#">العاب</a></li>
-                        <li><a href="#">ملابس</a></li>
-                        <li><a href="#">اثاث</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+                </header>
+            ) : (
+                <header>
+                    <div className="container">
+                        <div className="socials-login">
+                            <div className="login">
+                                {user ? 
+                                    <>                            
+                                        <img src={require('../Images/icons/white-user.png')} onClick={userLinksBar} />
+                                        <div className='userLinks disNone' ref={userLinks}>
+                                            <Link to={("")}><p>الحساب الشخصي</p></Link>
+                                            <p onClick={logout}>تسجيل الخروج</p>
+                                        </div>
+                                    </>
+                                    :
+                                    <Link to={"/Login"}>
+                                        <p>تسجيل الدخول</p>
+                                    </Link>
+                                }
+                            </div>
+        
+                            <a href="#" className='socials'>
+                                <img src={require('../Images/icons/instagram.png')} />
+                            </a>
+                        </div>
+        
+                        <div className="logo-links">
+                            <a href="/"><img src={require('../Images/Logo/BazarLogo.png')} className='logo-img' /></a>
+                            <ul className="links">
+                                <li><Link to={("/")}>الصفحة الرئيسية</Link></li>
+                                <li><Link to={("/Store")}>المنتجات</Link></li>
+                                <li><Link to={("/Contact")}>تواصل معنا</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+            )}
+        </>
     )
 }
 

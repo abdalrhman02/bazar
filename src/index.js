@@ -7,9 +7,10 @@ import Home from './Pages/Home';
 import Store from './Pages/Store';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
+import Contact from './Pages/Contact';
 import ProductPage from './Pages/ProductPage';
 import AddProduct from './Pages/AddProduct';
-import BanProducts from './Pages/BanProducts';
+import SellerGuidance from './Pages/SellerGuidance';
 
 // Styles
 import './Styles/GlobalRules/global.css';
@@ -17,6 +18,8 @@ import './Styles/home/home.css';
 import './Styles/Login-Signup/login.css';
 import './Styles/Store/store.css';
 import './Styles/AddProduct/addProduct.css';
+import './Styles/SellerGuidance/sellerGuidance.css';
+import './Styles/Contact/contact.css';
 // Component Styles
 import './Styles/Components Style/Header/header.css'
 import './Styles/Components Style/Footer/footer.css'
@@ -32,9 +35,10 @@ const router = createBrowserRouter([
   {path: "Store" ,element: <Store />,},
   {path: "Login" ,element: <Login />,},
   {path: "Signup" ,element: <Signup />,},
+  {path: "Contact" ,element: <Contact />,},
   {path: "ProductPage/:productId" ,element: <ProductPage />,},
   {path: "AddProduct" ,element: <AddProduct />,},
-  {path: "BanProducts" ,element: <BanProducts />,},
+  {path: "SellerGuidance" ,element: <SellerGuidance />,},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

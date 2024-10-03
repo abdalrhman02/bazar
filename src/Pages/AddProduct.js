@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 import { fst, storage, auth } from '../firebaseconfig';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
@@ -139,7 +140,7 @@ const AddProductPage = () => {
       <div className="addProduct">
         <div className="title">
           <h2>اضف اعلانك</h2>
-          <p>اذا كنت اول مرة تحاول البيع في موقعنا نطلب منك تصفح صفحة <b>المنتجات الممنوعة</b> و صفحة <b>نظام البيع و الشراء</b></p>
+          <p>الرجاء قراءة محتوى <Link to={'/SellerGuidance'}>الصفحة الارشادية للبيع</Link> قبل محاولة بيعك على موقعنا</p>
         </div>
 
         <div className="forms">

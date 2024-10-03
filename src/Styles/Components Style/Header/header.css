@@ -25,6 +25,7 @@ header .container .socials-login .login .userLinks {
   border-bottom: none;
   position: absolute;
   top: 45px;
+  z-index: 99;
 }
 header .container .socials-login .login .userLinks::after {
   content: "";
@@ -68,4 +69,13 @@ header .container .logo-links .links {
 }
 header .container .logo-links .links li a {
   color: #000;
+}
+
+@media (max-width: 850px) {
+  header .container .socials-login {
+    padding: 0 40px;
+  }
+  header .container .logo-links {
+    padding: 15px 40px;
+  }
 }/*# sourceMappingURL=header.css.map */

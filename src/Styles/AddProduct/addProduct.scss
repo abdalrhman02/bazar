@@ -5,10 +5,12 @@
         h2 {
             font-size: 28px;
         }
-        p{
-            margin-top: 15px;
-            max-width: 600px;
-            font-size: 18px;
+        p{            
+            a {
+                color: var(--main-color);
+                font-weight: 500;
+                text-decoration: underline;
+            }
         }
     }
 

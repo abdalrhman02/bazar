@@ -1,0 +1,42 @@
+.sellerGuidance {
+  margin: 3em 150px 8em;
+}
+.sellerGuidance section {
+  margin: 4em 0;
+}
+.sellerGuidance section p {
+  max-width: 900px;
+  line-height: 1.8em;
+  margin-top: 17px;
+}
+.sellerGuidance .sellingAdvice ul li {
+  position: relative;
+  padding-right: 23px;
+  margin-top: 20px;
+}
+.sellerGuidance .sellingAdvice ul li::before {
+  content: "";
+  width: 13px;
+  height: 5px;
+  background-color: var(--main-color);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sellerGuidance .banProducts ul li {
+  position: relative;
+  padding-right: 23px;
+  margin-top: 20px;
+}
+.sellerGuidance .banProducts ul li::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}/*# sourceMappingURL=sellerGuidance.css.map */

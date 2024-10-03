@@ -1,8 +1,11 @@
 .store .container {
-  display: grid;
-  grid-template-columns: 30% 60%;
+  display: flex;
+  justify-content: center;
   gap: 25px;
-  margin: 3em 150px 8em;
+  margin: 5em 5em 10em;
+}
+.store .container .sections-products {
+  width: 70%;
 }
 .store .container .sections-products .search-add {
   display: flex;
@@ -84,6 +87,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .store .container .sections-products .sectionsList li img {
   width: 4.5em;
@@ -106,6 +110,8 @@
 .store .container .options {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 30%;
 }
 .store .container .options .types {
   display: flex;
@@ -150,4 +156,9 @@
   background-color: var(--opc-second-color);
   color: #fff;
   border: 2px solid var(--second-color);
+}
+@media (max-width: 1300px) {
+  .store .container {
+    margin: 3em 90px 8em;
+  }
 }/*# sourceMappingURL=store.css.map */
