@@ -82,6 +82,22 @@ header .container .logo-links .links li a {
 .small-header .logo img {
   width: 8em;
 }
+.small-header .links {
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  border-bottom: 2px solid var(--main-color);
+}
+.small-header .links .link {
+  display: flex;
+  align-items: center;
+  gap: 1.4em;
+}
+.small-header .links .link li a {
+  color: #000;
+}
 
 @media (max-width: 850px) {
   header .container .socials-login {

@@ -105,6 +105,28 @@ header {
             width: 8em
         }
     }
+
+    .links {
+        padding: 15px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        border-bottom: 2px solid var(--main-color);
+
+        .link {
+            display: flex;
+            align-items: center;
+            gap: 1.4em;
+
+            li {
+                
+                a {
+                    color: #000
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 850px) {

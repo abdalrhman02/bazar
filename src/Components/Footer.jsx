@@ -17,20 +17,11 @@ function Footer(){
 
                 <div className="links">
                     <ul>
-                        <Link to={""}><li>الرئيسية</li></Link>
-                        <Link to={""}><li>تسجيل الدخول</li></Link>
-                        <Link to={""}><li>تواصل معنا</li></Link>
-                    </ul>
-
-                    <ul>
+                        <Link to={"/"}><li>الرئيسية</li></Link>
+                        <Link to={"/Login"}><li>تسجيل الدخول</li></Link>
+                        <Link to={"/Contact"}><li>تواصل معنا</li></Link>
                         <Link to={""}><li>الاسئلة الشائعة</li></Link>
-                        <Link to={""}><li>شروط الاستخدام</li></Link>
-                        <Link to={""}><li>نظام الشراء و البيع</li></Link>
-                    </ul>
-
-                    <ul>
-                        <Link to={""}><li>نصائح للبيع</li></Link>
-                        <Link to={""}><li>قائمة المنتجات الممنوعة</li></Link>
+                        <Link to={"/SellerGuidance"}><li>مهم للبائعين</li></Link>
                     </ul>
                 </div>
 

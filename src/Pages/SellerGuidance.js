@@ -48,6 +48,13 @@ function SellerGuidance() {
 
                         <p>سيتم حذف اي منتج ممنوع من موقعنا و نحن غير مسؤولون عنه!</p>
                     </section>
+
+                    <section>
+                        <h2>مستعد لنشر منتجك الاول؟</h2>
+                        <Link to={("/AddProduct")}>
+                            <button className="btn" style={{marginTop:"15px"}}>اضف منتج</button>
+                        </Link>
+                    </section>
                 </div>
             </div>
 

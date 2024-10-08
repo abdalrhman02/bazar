@@ -1,9 +1,7 @@
 .loginSignupForm {
     position: relative;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
     height: 88vh;
+    padding: 3em 0;
 
     .container {
         display: flex;
@@ -13,6 +11,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        width: 60%;
     
         .image {
             background-color: #e86a34cc;
@@ -21,7 +20,7 @@
             align-items: center;
             justify-content: center;
             padding: 4em 0;
-            width: 24em;
+            width: 40%;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
     
@@ -37,7 +36,7 @@
     
         .loginForm {
             padding: 2em 2em;
-            width: 28em;
+            width: 60%;
     
             .title {
                 font-size: 28px;
@@ -75,6 +74,7 @@
     
                 .btns {
                     display: flex;
+                    flex-direction: column;
                     gap: 1em;
     
                     button {
@@ -84,6 +84,12 @@
                         &:last-child {
                             background-color: var(--second-color  );
                         }
+                    }
+
+                    a {
+                        color: var(--second-color);
+                        font-weight: 600;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -139,5 +145,43 @@
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
         }
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .loginSignupForm .container {
+        width: 75%;
+    }
+    .loginSignupForm .container .image img {
+        width: 18em;
+    }
+}
+@media (max-width: 900px) {
+    .loginSignupForm .container {
+        flex-direction: column;
+        width: 80%;
+    }
+    .loginSignupForm {
+        height: 120vh;
+    }
+    .loginSignupForm .container .loginForm {
+        width: 70%;
+    }
+    .loginSignupForm .container .image {
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
+    }
+
+
+
+
+    .signup .container .image {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
     }
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, fst , app } from "../firebaseconfig";
+import { auth, fst } from "../firebaseconfig";
 import { doc, setDoc } from 'firebase/firestore';
 
 //Components
@@ -38,7 +38,6 @@ function Signup() {
                 role: "User",
             });
 
-            console.log("Signup successful");
             navigate('/');
         } catch (error) {
             console.error("Signup error:", error);
@@ -50,13 +49,12 @@ function Signup() {
         }
     };
 
-
     // If user logged in go to the home page.
     auth.onAuthStateChanged(function(user) {
         if (user) {
-          navigate("/")
+            navigate("/")
         } else {
-          return
+            return
         }
     });
 
@@ -92,16 +90,14 @@ function Signup() {
                             </div>
                             <div className='btns'>
                                 <button className='loginBtn btn' type='submit'>انشاء الحساب</button>
-                                <Link to="/Login">
-                                    <button className='loginBtn btn' type='button'>تسجيل الدخول</button>
-                                </Link>
+                                <p>لديك حساب على موقعنا؟ <Link to="/Login">سجل دخولك من هنا</Link></p>
                             </div>
                         </form>
 
                         <br></br>
                         {noti}
 
-                        <div className='otherLoginWays'>
+                        {/* <div className='otherLoginWays'>
                             <h3>تسجيل الدخول عبر</h3>
                             <div>
                                 <div className='way'>
@@ -111,7 +107,7 @@ function Signup() {
                                     <img src={require('../Images/icons/google.png')} alt="Google" />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

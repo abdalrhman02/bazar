@@ -58,3 +58,16 @@
         }
     }
 }
+
+
+@media (max-width: 900px) {
+    .sellerGuidance {
+        margin: 3em 80px 8em;
+    }
+}
+
+@media (max-width: 700px) {
+    .sellerGuidance {
+        margin: 3em 40px 8em;
+    }
+}

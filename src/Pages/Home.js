@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
+import { fst, storage, auth } from '../firebaseconfig';
 
 // Components
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import ProductCard from '../Components/ProductCard';
+import { useEffect } from "react";
 
 
 function Home() {
+   
 
     return (
         <div className="home">
@@ -14,7 +17,7 @@ function Home() {
 
             <div className='intro'>
                 <div className='text'>
-                    <h1>موقع <b className="bo">بيع</b> و <b className="bg">شراء</b> الاغراض المستعملة</h1>
+                    <h1> <b className="bo">بيع</b> و <b className="bg">شراء</b> الاغراض المستعملة</h1>
                     <p>محتاج شغلة بس ما بدك تصرف؟  موقعنا بفيدك! اشتري اغراض مستعملة بحالة جيدة و باسعار ممتازة</p>
                     <Link to={"Store"}>
                         <button className="btn">المزيد</button>

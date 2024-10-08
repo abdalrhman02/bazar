@@ -1,3 +1,280 @@
+.addProduct {
+  position: relative;
+  margin: 4em 150px 8em;
+}
+.addProduct .title h2 {
+  font-size: 28px;
+}
+.addProduct .title p a {
+  color: var(--main-color);
+  font-weight: 500;
+  text-decoration: underline;
+}
+.addProduct .forms {
+  display: flex;
+  gap: 70px;
+  margin-top: 2em;
+}
+.addProduct .forms .productDetailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em 20px 5em;
+  background-color: #F0F0F0;
+  width: 55%;
+}
+.addProduct .forms .productDetailsForm div {
+  display: flex;
+}
+.addProduct .forms .productDetailsForm .inp {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.addProduct .forms .productDetailsForm .inp label {
+  margin-bottom: 7px;
+  font-size: 18px;
+}
+.addProduct .forms .productDetailsForm .inp input {
+  width: 90%;
+  height: 2.6em;
+  font-size: 14px;
+  padding-right: 7px;
+  background-color: var(--main-color);
+  opacity: 0.7;
+  outline: none;
+  border: none;
+  color: #FFF;
+}
+.addProduct .forms .productDetailsForm .inp [name=prDescription] {
+  width: 185%;
+  height: 15em;
+  font-size: 14px;
+  padding: 10px;
+  background-color: var(--main-color);
+  opacity: 0.7;
+  outline: none;
+  border: none;
+  color: #FFF;
+}
+.addProduct .forms .productDetailsForm .inp [name=sellerNumber] {
+  width: 190%;
+}
+.addProduct .forms .productDetailsForm .inp [name=sellerNumber]::-moz-placeholder {
+  color: #FFF;
+}
+.addProduct .forms .productDetailsForm .inp [name=sellerNumber]::placeholder {
+  color: #FFF;
+}
+.addProduct .forms .productDetailsForm .inp select {
+  width: 90%;
+  height: 3em;
+  font-size: 14px;
+  background-color: var(--main-color);
+  opacity: 0.7;
+  outline: none;
+  border: none;
+  color: #FFF;
+}
+.addProduct .forms .productDetailsForm .inp select option {
+  font-size: 14px;
+}
+.addProduct .forms .productImagesForm {
+  background-color: #F0F0F0;
+  width: 45%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em 20px 1em;
+}
+.addProduct .forms .productImagesForm .title {
+  text-align: start;
+}
+.addProduct .forms .productImagesForm .title p {
+  margin: 7px 0;
+  font-size: 16px;
+}
+.addProduct .forms .productImagesForm .images {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 1em 10px;
+  grid-template-areas: "pic1 pic1 pic1" "pic2 pic3 pic4";
+  margin-top: 1em;
+}
+.addProduct .forms .productImagesForm .images .image-upload {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+}
+.addProduct .forms .productImagesForm .images .image-upload:first-child {
+  width: 70%;
+  height: 350px;
+  grid-area: pic1;
+  justify-self: center;
+  border-radius: 6px;
+}
+.addProduct .forms .productImagesForm .images .image-upload:nth-child(2) {
+  grid-area: pic2;
+}
+.addProduct .forms .productImagesForm .images .image-upload:nth-child(3) {
+  grid-area: pic3;
+}
+.addProduct .forms .productImagesForm .images .image-upload:last-child {
+  grid-area: pic4;
+}
+.addProduct .forms .productImagesForm .images .image-upload p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+.addProduct .btn {
+  margin-top: 1em;
+  width: 8em;
+  height: 2.5em;
+}
+.addProduct .notifications {
+  position: fixed;
+  top: 15em;
+  left: 0;
+}
+.addProduct .notifications .noti {
+  position: relative;
+  background-color: var(--main-color);
+  align-items: center;
+  gap: 0.7em;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px 15px;
+}
+.addProduct .notifications .noti::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 7px;
+  background-color: var(--second-color);
+}
+.addProduct .notifications .noti img {
+  width: 38px;
+}
+.addProduct .notifications .noti p {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.addProduct-noUser {
+  height: 70vh;
+  position: relative;
+}
+.addProduct-noUser .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.addProduct-noUser .container h2 {
+  font-size: 33px;
+}
+.addProduct-noUser .container button {
+  margin-top: 1.5em;
+  width: 10em;
+  font-size: 20px;
+}
+
+@media (max-width: 1500px) {
+  .addProduct {
+    margin: 4em 60px 8em;
+  }
+}
+@media (max-width: 1200px) {
+  .addProduct .forms {
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .addProduct .forms .productDetailsForm {
+    width: 70%;
+  }
+  .addProduct .forms .productImagesForm {
+    width: 70%;
+  }
+  .addProduct .forms .productImagesForm .images .image-upload:first-child {
+    width: 75%;
+    height: 330px;
+  }
+  .addProduct .forms .productImagesForm .images .image-upload {
+    width: 135px;
+    height: 135px;
+  }
+  .addProduct .btn {
+    position: relative;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+@media (max-width: 800px) {
+  .title {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .addProduct .title h2 {
+    font-size: 30px;
+  }
+  .title h2::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .title p {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .addProduct {
+    margin: 4em 30px 8em;
+  }
+  .addProduct .forms .productDetailsForm {
+    width: 85%;
+  }
+  .addProduct .forms .productImagesForm {
+    width: 85%;
+  }
+  .addProduct .forms .productImagesForm .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .addProduct .forms .productImagesForm .images .image-upload,
+  .addProduct .forms .productImagesForm .images .image-upload:first-child {
+    width: 65%;
+    height: 375px;
+  }
+}
+@media (max-width: 600px) {
+  .addProduct .forms .productImagesForm .images .image-upload,
+  .addProduct .forms .productImagesForm .images .image-upload:first-child {
+    width: 85%;
+    height: 300px;
+  }
+}
 .productAdd {
   background-color: #eb9a77;
   border-bottom: 3px solid var(--second-color);
@@ -48,68 +325,6 @@
 }
 .productAdd a .productInfo .town img, .productAdd a .productInfo .user img {
   width: 1.4em;
-}
-
-.sellerContactWindow {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4588235294);
-  position: fixed;
-  top: 0;
-  z-index: 99;
-}
-.sellerContactWindow .sellerContactContent {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: var(--opc-main-color);
-  border: 3px solid var(--second-color);
-  width: 30%;
-  padding: 2.5em 0 2em;
-}
-.sellerContactWindow .sellerContactContent .closeWindow {
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  background-color: var(--opc-main-color);
-  border: 3px solid var(--second-color);
-  width: 2em;
-  height: 2em;
-  padding: 8px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.sellerContactWindow .sellerContactContent .closeWindow:hover {
-  background-color: var(--main-color);
-}
-.sellerContactWindow .sellerContactContent .closeWindow img {
-  width: 1.8em;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.sellerContactWindow .sellerContactContent .text {
-  color: #FFF;
-}
-.sellerContactWindow .sellerContactContent .text h2 {
-  font-size: 36px;
-}
-.sellerContactWindow .sellerContactContent .text p {
-  font-size: 20px;
-  margin: 15px 0;
-}
-.sellerContactWindow .sellerContactContent .logo {
-  width: 6em;
-  margin-top: 20px;
-}
-.sellerContactWindow .sellerContactContent .image {
-  width: 16em;
 }
 
 .product {
@@ -182,6 +397,68 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.sellerContactWindow {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4588235294);
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+.sellerContactWindow .sellerContactContent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--opc-main-color);
+  border: 3px solid var(--second-color);
+  width: 30%;
+  padding: 2.5em 0 2em;
+}
+.sellerContactWindow .sellerContactContent .closeWindow {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: var(--opc-main-color);
+  border: 3px solid var(--second-color);
+  width: 2em;
+  height: 2em;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sellerContactWindow .sellerContactContent .closeWindow:hover {
+  background-color: var(--main-color);
+}
+.sellerContactWindow .sellerContactContent .closeWindow img {
+  width: 1.8em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.sellerContactWindow .sellerContactContent .text {
+  color: #FFF;
+}
+.sellerContactWindow .sellerContactContent .text h2 {
+  font-size: 36px;
+}
+.sellerContactWindow .sellerContactContent .text p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+.sellerContactWindow .sellerContactContent .logo {
+  width: 6em;
+  margin-top: 20px;
+}
+.sellerContactWindow .sellerContactContent .image {
+  width: 16em;
 }
 
 @media (max-width: 1000px) {

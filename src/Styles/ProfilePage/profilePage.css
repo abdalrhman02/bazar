@@ -1,0 +1,62 @@
+.profilePage {
+  padding: 5em 8em;
+}
+.profilePage .container {
+  display: flex;
+  gap: 6em;
+}
+.profilePage .container .links ul li {
+  font-size: 17px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.profilePage .container .userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+.profilePage .container .userDetails .profile {
+  display: flex;
+  gap: 1em;
+}
+.profilePage .container .userDetails .profile .profileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+.profilePage .container .userDetails .profile .profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+.profilePage .container .userDetails .profile .profileInfo .userName {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+.profilePage .container .userDetails .profile .profileInfo .more {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+.profilePage .container .userDetails .profile .profileInfo .more p {
+  font-size: 15px;
+}
+.profilePage .container .userDetails .currentAdds h3 {
+  font-size: 22px;
+  margin-bottom: 1em;
+}
+.profilePage .container .userDetails .currentAdds ul li {
+  background-color: #EBE6E6;
+  padding: 7px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.profilePage .container .userDetails .currentAdds ul li img {
+  width: 12em;
+}
+.profilePage .container .userDetails .currentAdds ul li p {
+  color: black;
+}/*# sourceMappingURL=profilePage.css.map */

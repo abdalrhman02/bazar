@@ -53,7 +53,7 @@ function Header() {
                                     <>                            
                                         <img src={require('../Images/icons/white-user.png')} onClick={userLinksBar} />
                                         <div className='userLinks disNone' ref={userLinks}>
-                                            <Link to={("")}><p>الحساب الشخصي</p></Link>
+                                            <Link to={("/ProfilePage")}><p>الحساب الشخصي</p></Link>
                                             <p onClick={logout}>تسجيل الخروج</p>
                                         </div>
                                     </>
@@ -89,7 +89,7 @@ function Header() {
                                     <>                            
                                         <img src={require('../Images/icons/white-user.png')} onClick={userLinksBar} />
                                         <div className='userLinks disNone' ref={userLinks}>
-                                            <Link to={("")}><p>الحساب الشخصي</p></Link>
+                                            <Link to={("/ProfilePage")}><p>الحساب الشخصي</p></Link>
                                             <p onClick={logout}>تسجيل الخروج</p>
                                         </div>
                                     </>
@@ -109,9 +109,9 @@ function Header() {
                             <a href="/"><img src={require('../Images/Logo/BazarLogo.png')} className='logo-img' /></a>
                         </div>
         
-                        <div className="logo-links">
-                            <ul className="links">
-                                <li><Link to={("/")}>الصفحة الرئيسية</Link></li>
+                        <div className="links">
+                            <ul className="link">
+                                <li><Link to={("/")}>الرئيسية</Link></li>
                                 <li><Link to={("/Store")}>المنتجات</Link></li>
                                 <li><Link to={("/Contact")}>تواصل معنا</Link></li>
                             </ul>

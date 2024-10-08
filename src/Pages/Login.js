@@ -71,16 +71,14 @@ function Login() {
                             </div>
                             <div className='btns'>
                                 <button className='loginBtn btn' type='submit'>تسجيل الدخول</button>
-                                <Link to="/Signup">
-                                    <button className='loginBtn btn' type='button'>انشاء حساب</button>
-                                </Link>
+                                <p>لا تملك حساب على موقعنا؟ <Link to="/Signup">انشئ حساب جديد الان</Link></p>
                             </div>
                         </form>
 
                         {noti && <p className="notification">{noti}</p>}
                         {error && <p className="error">{error}</p>}
 
-                        <div className='otherLoginWays'>
+                        {/* <div className='otherLoginWays'>
                             <h3>تسجيل الدخول عبر</h3>
                             <div>
                                 <div className='way'>
@@ -90,7 +88,7 @@ function Login() {
                                     <img src={require('../Images/icons/google.png')} alt="Google" />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className='image'>

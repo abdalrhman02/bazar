@@ -53,7 +53,7 @@ function Store() {
 
             <div className="store">            
                 <div className="container">
-                    <div className='options'>
+                    {/* <div className='options'>
                         <div className='types'>
                             <div>
                                 <img src={require('../Images/store/android.png')} />
@@ -91,7 +91,7 @@ function Store() {
                                 <option>الجنوب</option>
                             </select>
                         </div>
-                    </div>
+                    </div> */}
                     
                     <div className='sections-products'>
                         <div className='search-add'>

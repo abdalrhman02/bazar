@@ -21,15 +21,17 @@ footer {
 
 
         .links {
-            display: grid;
-            grid-template-columns: 26% 26% 26%;
-            justify-content: center;
             padding: 40px 80px;
             
             ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 3em;
+                flex-wrap: wrap;
+
                 li {
                     color: #FFF;
-                    margin-bottom: 25px
                 }
             }
         }

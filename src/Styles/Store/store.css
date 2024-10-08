@@ -5,7 +5,7 @@
   margin: 5em 5em 10em;
 }
 .store .container .sections-products {
-  width: 60%;
+  width: 70%;
 }
 .store .container .sections-products .search-add {
   display: flex;
@@ -107,56 +107,7 @@
 .store .container .sections-products .products .no-products b {
   color: var(--main-color);
 }
-.store .container .options {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 25%;
-}
-.store .container .options .types {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-}
-.store .container .options .types div {
-  position: relative;
-  background-color: #F3F3F3;
-  border: 1px solid var(--opc-main-color);
-  border-radius: 8px;
-  width: 7em;
-  height: 7em;
-  text-align: center;
-  transition: 0.4s;
-}
-.store .container .options .types div:hover {
-  border: 1px solid var(--second-color);
-  cursor: pointer;
-}
-.store .container .options .types div:hover img {
-  transform: scale(1.1) translate(-45%, -45%);
-}
-.store .container .options .types div img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 4em;
-  transition: 0.4s;
-}
-.store .container .options .towns {
-  margin-top: 3em;
-}
-.store .container .options .towns h3 {
-  margin-bottom: 10px;
-}
-.store .container .options .towns select {
-  width: 16em;
-  height: 2.3em;
-  font-size: 15px;
-  background-color: var(--opc-second-color);
-  color: #fff;
-  border: 2px solid var(--second-color);
-}
+
 @media (max-width: 1200px) {
   .store .container .options {
     display: none;
@@ -169,5 +120,24 @@
   }
   .store .container .sections-products .search-add .add {
     margin-top: 1.5em;
+  }
+}
+@media (max-width: 600px) {
+  .store .container {
+    margin: 5em 0.5em 10em;
+  }
+  .store .container .sections-products .search-add .search input {
+    width: 18em;
+  }
+  .store .container .sections-products .sectionsList {
+    margin: 1.5em auto;
+    width: 80%;
+  }
+  .productAdd a .product-img {
+    width: 8em;
+    height: 10em;
+  }
+  .productAdd a .productInfo .name-price .name {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=store.css.map */
