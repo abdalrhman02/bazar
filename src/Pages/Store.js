@@ -11,6 +11,7 @@ import ProductAdd from '../Components/ProductAdd';
 function Store() {
     const [products, setProducts] = useState([]);
     const [selectedSection, setSelectedSection] = useState('كل شيء');
+    const [searchTerm, setSearchTerm] = useState('');
     
     useEffect(() => {
       const fetchProducts = async () => {
@@ -27,9 +28,11 @@ function Store() {
         setSelectedSection(section);
     };
 
-    const filteredProducts = products.filter(product => 
-        selectedSection === 'كل شيء' || product.prSection === selectedSection
-    );
+    const filteredProducts = products.filter(product => {
+        const matchesSection = selectedSection === 'كل شيء' || product.prSection === selectedSection;
+        const matchesSearch = product.prName.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesSection && matchesSearch;
+    });
 
 
     // Small Screen 
@@ -97,7 +100,9 @@ function Store() {
                         <div className='search-add'>
                             <div className='search'>
                                 <button><img src={require('../Images/icons/search-white.png')} /></button>
-                                <input type="text" placeholder='عن ماذا تبحث؟' />
+                                <input type="text" placeholder='عن ماذا تبحث؟'
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)} />
                             </div>
 
                             <Link to={'/AddProduct'}>
