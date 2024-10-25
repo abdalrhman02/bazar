@@ -161,7 +161,7 @@ function ProfilePage() {
                                                         <img src={product.prImg1} alt={product.prName} />
                                                         <p>{product.prName}</p>
                                                         <p>₪{product.prPrice}</p>
-                                                        <button onClick={() => handleDeleteProduct(product.productId)}>حذف المنتج</button>
+                                                        <button className='btn' onClick={() => handleDeleteProduct(product.productId)}>حذف المنتج</button>
                                                     </li>
                                                 ))}
                                             </ul>
