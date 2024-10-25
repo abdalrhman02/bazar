@@ -11,23 +11,17 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const [noti, setNoti] = useState("");
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
         setError("");
-        setNoti("");
 
         try {
             await signInWithEmailAndPassword(auth, email, password);
             navigate('/');
         } catch (error) {
-            if (error.code === "auth/user-not-found" || error.code === "auth/wrong-password" || error.code === "Firebase: Error (auth/invalid-credential).") {
-                setNoti("البريد الإلكتروني أو كلمة المرور غير صحيحة!");
-            } else {
-                setError(error.message);
-            }
+            setError("البريد الإلكتروني أو كلمة المرور غير صحيحة!");
         }
     };
 
@@ -71,12 +65,12 @@ function Login() {
                             </div>
                             <div className='btns'>
                                 <button className='loginBtn btn' type='submit'>تسجيل الدخول</button>
+                                {error && <p className="error" style={{color: 'red'}}>{error}</p>}
+
                                 <p>لا تملك حساب على موقعنا؟ <Link to="/Signup">انشئ حساب جديد الان</Link></p>
                             </div>
                         </form>
 
-                        {noti && <p className="notification">{noti}</p>}
-                        {error && <p className="error">{error}</p>}
 
                         {/* <div className='otherLoginWays'>
                             <h3>تسجيل الدخول عبر</h3>

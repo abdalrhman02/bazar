@@ -48,6 +48,13 @@
   font-size: 22px;
   margin-bottom: 1em;
 }
+.profilePage .container .userDetails .currentAdds ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
 .profilePage .container .userDetails .currentAdds ul li {
   background-color: #EBE6E6;
   padding: 7px;
@@ -59,4 +66,25 @@
 }
 .profilePage .container .userDetails .currentAdds ul li p {
   color: black;
+}
+
+@media (max-width: 950px) {
+  .profilePage {
+    padding: 5em 3em;
+  }
+  .profilePage .container {
+    gap: 2em;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profilePage .container .userDetails .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profilePage .container .userDetails .currentAdds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=profilePage.css.map */
