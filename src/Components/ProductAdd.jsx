@@ -1,16 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { getAuth } from 'firebase/auth';
+import { doc, getDoc } from 'firebase/firestore';
+import { fst } from '../firebaseconfig';
 
 function ProductAdd({product}) {
 
-    const [username, setUsername] = useState('');
+    const [sellerUsername, setSellerUsername] = useState('');
+    const [sellerTown, setSellerTown] = useState('');
     useEffect(() => {
         const auth = getAuth();
         const user = auth.currentUser;
 
         if (user) {
-            setUsername(user.displayName || user.email);
+            setSellerUsername(user.displayName);
+            
+            const fetchUserTown = async () => {
+                try {
+                    const userDocRef = doc(fst, 'users', user.uid);
+                    const userDoc = await getDoc(userDocRef);
+
+                    if (userDoc.exists()) {
+                        setSellerTown(userDoc.data().town || '');
+                    }
+                } catch (error) {
+                    console.error('Error fetching user town:', error);
+                }
+            };
+
+            fetchUserTown();
         }
     }, []);
 
@@ -31,12 +49,12 @@ function ProductAdd({product}) {
                         <div>
                             <div className="town">
                                 <img src={require('../Images/icons/location.png')} />
-                                <p>{product.sellerTown}</p>
+                                <p>{sellerTown}</p>
                             </div>
 
                             <div className="user">
                                 <img src={require('../Images/icons/user.png')} />
-                                <p>{product.sellerName}</p>
+                                <p>{sellerUsername}</p>
                             </div>
                         </div>
                     </div>

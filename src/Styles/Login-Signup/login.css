@@ -136,14 +136,14 @@
 @media (max-width: 900px) {
   .loginSignupForm .container {
     flex-direction: column;
-    width: 80%;
+    width: 85%;
   }
   .loginSignupForm {
     height: 130vh;
     padding: 6em 0;
   }
   .loginSignupForm .container .loginForm {
-    width: 70%;
+    width: 75%;
   }
   .loginSignupForm .container .image {
     width: 100%;

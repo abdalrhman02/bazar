@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 import { auth, storage, fst } from '../firebaseconfig';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
-import { updateDoc, doc, getDoc } from 'firebase/firestore';
+import { updateDoc, doc, getDoc, deleteDoc } from 'firebase/firestore';
 import { updateProfile } from 'firebase/auth';
 
 // Components
@@ -84,6 +84,28 @@ function ProfilePage() {
         }
     };
 
+    const handleDeleteProduct = async (productId) => {
+        try {
+            // Delete from main products collection
+            const productDocRef = doc(fst, 'products', productId);
+            await deleteDoc(productDocRef);
+
+            // Remove from user's products list
+            const userDocRef = doc(fst, 'users', auth.currentUser.uid);
+            const userDoc = await getDoc(userDocRef);
+
+            if (userDoc.exists()) {
+                const updatedUserProducts = userDoc.data().userProducts.filter((product) => product.productId !== productId);
+                await updateDoc(userDocRef, { userProducts: updatedUserProducts });
+                setUserProducts(updatedUserProducts);
+            }
+
+            alert('تم حذف المنتج بنجاح');
+        } catch (error) {
+            console.error('Error deleting product:', error.message);
+        }
+    };
+
     return (
         <>
             <Header />
@@ -99,8 +121,6 @@ function ProfilePage() {
                         <div className='links'>
                             <ul>
                                 <li>الملف الشخصي</li>
-                                {/* <li>البيانات الشخصية</li> */}
-                                {/* <li>حذف الحساب</li> */}
                             </ul>
                         </div>
 
@@ -137,13 +157,12 @@ function ProfilePage() {
                                             <h3>منتجات معروضة للبيع:</h3>
                                             <ul>
                                                 {userProducts.map((product) => (
-                                                    <Link to={`/${product.id}`}>
-                                                        <li key={product.productId}>
-                                                            <img src={product.prImg1} />
-                                                            <p>{product.prName}</p>
-                                                            <p>₪{product.prPrice}</p>
-                                                        </li>
-                                                    </Link>
+                                                    <li key={product.productId}>
+                                                        <img src={product.prImg1} alt={product.prName} />
+                                                        <p>{product.prName}</p>
+                                                        <p>₪{product.prPrice}</p>
+                                                        <button onClick={() => handleDeleteProduct(product.productId)}>حذف المنتج</button>
+                                                    </li>
                                                 ))}
                                             </ul>
                                         </>

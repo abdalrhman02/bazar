@@ -65,7 +65,7 @@ function Login() {
                             </div>
                             <div className='btns'>
                                 <button className='loginBtn btn' type='submit'>تسجيل الدخول</button>
-                                {error && <p className="error" style={{color: 'red'}}>{error}</p>}
+                                {error && <p className="error" style={{color: 'red', fontWeight:600}}>{error}</p>}
 
                                 <p>لا تملك حساب على موقعنا؟ <Link to="/Signup">انشئ حساب جديد الان</Link></p>
                             </div>

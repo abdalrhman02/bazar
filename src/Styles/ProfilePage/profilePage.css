@@ -63,6 +63,7 @@
 }
 .profilePage .container .userDetails .currentAdds ul li img {
   width: 12em;
+  height: 14em;
 }
 .profilePage .container .userDetails .currentAdds ul li p {
   color: black;

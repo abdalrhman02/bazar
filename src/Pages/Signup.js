@@ -15,12 +15,10 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const [noti, setNoti] = useState("");
     const navigate = useNavigate();
 
     const handleSignup = async (e) => {
         e.preventDefault();
-        setNoti("");
         setError("");
 
         const displayName = lastName ? `${firstName} ${lastName}` : firstName;
@@ -42,9 +40,7 @@ function Signup() {
         } catch (error) {
             console.error("Signup error:", error);
             if (error.code === "auth/email-already-in-use") {
-                setNoti("هنالك حساب يستخدم هذا الايميل بالفعل!");
-            } else {
-                setError(error.message);
+                setError("هنالك حساب يستخدم هذا الايميل بالفعل!");
             }
         }
     };
@@ -90,12 +86,13 @@ function Signup() {
                             </div>
                             <div className='btns'>
                                 <button className='loginBtn btn' type='submit'>انشاء الحساب</button>
+                                {error && <p className="error" style={{color: 'red', fontWeight:600}}>{error}</p>}
+
                                 <p>لديك حساب على موقعنا؟ <Link to="/Login">سجل دخولك من هنا</Link></p>
                             </div>
                         </form>
 
                         <br></br>
-                        {noti}
 
                         {/* <div className='otherLoginWays'>
                             <h3>تسجيل الدخول عبر</h3>
