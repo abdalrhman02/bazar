@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 import { fst, storage, auth } from '../firebaseconfig';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { collection,doc, updateDoc, addDoc, arrayUnion } from 'firebase/firestore';
+import { collection,doc, updateDoc, getDoc, addDoc, arrayUnion } from 'firebase/firestore';
 
 // Components
 import Header from '../Components/Header';
@@ -19,6 +19,29 @@ const AddProductPage = () => {
     sellerNumber: ''
   });
   const [images, setImages] = useState([null, null, null, null]);
+  const [userData, setUserData] = useState({ username: '', town: 's' });
+
+  const successNoti = useRef();
+  const noImageNoti = useRef();
+  const inputMissNoti = useRef();
+
+  // Fetch user data (username, town) on component mount
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const userDoc = await getDoc(doc(fst, 'users', auth.currentUser.uid));
+        if (userDoc.exists()) {
+          setUserData(userDoc.data());
+        } else {
+          console.log('No user data found');
+        }
+      } catch (error) {
+        console.error('Error fetching user data:', error.message);
+      }
+    };
+
+    fetchUserData();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,13 +57,10 @@ const AddProductPage = () => {
     }
   };
 
-  let successNoti = useRef();
-  let noImageNoti = useRef();
-  let inputMissNoti = useRef();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate inputs
+    // Input validation
     if (!formData.prName || !formData.prPrice || !formData.prSection || !formData.prStatus || !formData.prDescription || !formData.sellerNumber) {
       inputMissNoti.current.classList.add('disFlex');
       inputMissNoti.current.classList.remove('disNone');
@@ -57,64 +77,64 @@ const AddProductPage = () => {
 
     try {
       const productId = uuidv4(); // Generate unique product ID
-  
+
       const imageUrls = await Promise.all(
-          images.map(async (image) => {
-              if (image) {
-                  const uniqueFileName = `${uuidv4()}_${image.name}`;
-                  const storageRef = ref(storage, `product-images/${productId}/${uniqueFileName}`);
-                  await uploadBytes(storageRef, image);
-                  return await getDownloadURL(storageRef);
-              }
-              return '';
-          })
+        images.map(async (image) => {
+          if (image) {
+            const uniqueFileName = `${uuidv4()}_${image.name}`;
+            const storageRef = ref(storage, `product-images/${productId}/${uniqueFileName}`);
+            await uploadBytes(storageRef, image);
+            return await getDownloadURL(storageRef);
+          }
+          return '';
+        })
       );
-  
+
       const newProduct = {
-          prDescription: formData.prDescription,
-          prImg1: imageUrls[0] || '',
-          prImg2: imageUrls[1] || '',
-          prImg3: imageUrls[2] || '',
-          prImg4: imageUrls[3] || '',
-          prName: formData.prName,
-          prPrice: formData.prPrice,
-          prSection: formData.prSection,
-          prStatus: formData.prStatus,
-          sellerNumber: formData.sellerNumber,
-          productId: productId
-      };
-  
-      // Add product to the main products collection
+        prDescription: formData.prDescription,
+        prImg1: imageUrls[0] || '',
+        prImg2: imageUrls[1] || '',
+        prImg3: imageUrls[2] || '',
+        prImg4: imageUrls[3] || '',
+        prName: formData.prName,
+        prPrice: formData.prPrice,
+        prSection: formData.prSection,
+        prStatus: formData.prStatus,
+        sellerNumber: formData.sellerNumber,
+        productId: productId,
+        sellerName: userData.username,
+        sellerTown: userData.town
+      }; 
+
       const productRef = await addDoc(collection(fst, 'products'), newProduct);
-  
-      // Add product to user's userProducts subcollection with the same ID
+
       const userDocRef = doc(fst, 'users', auth.currentUser.uid);
       await updateDoc(userDocRef, {
-          userProducts: arrayUnion({
-              ...newProduct,
-              productId: productRef.id // Ensures the product ID is the same
-          })
+        userProducts: arrayUnion({
+          ...newProduct,
+          productId: productRef.id
+        })
       });
-  
+
       successNoti.current.classList.add('disFlex');
       setTimeout(() => successNoti.current.classList.remove('disFlex'), 4000);
-  
-      // Reset form
+
+      // Reset the form
       setFormData({
-          prDescription: '',
-          prName: '',
-          prPrice: '',
-          prSection: '',
-          prStatus: '',
-          sellerNumber: ''
+        prDescription: '',
+        prName: '',
+        prPrice: '',
+        prSection: '',
+        prStatus: '',
+        sellerNumber: ''
       });
       setImages([null, null, null, null]);
     } catch (error) {
-        console.error('Error adding product:', error.message);
-        alert('Error adding product: ' + error.message);
+      console.error('Error adding product:', error.message);
+      alert('Error adding product: ' + error.message);
     }
-    
   };
+
 
   return (
     <>
